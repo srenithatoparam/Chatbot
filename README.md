@@ -1,75 +1,145 @@
-```markdown
-# Gwen's Chatbot
+# Chatbot Project
 
-## Overview
-Gwen's Chatbot is an AI-powered conversational agent built using Streamlit for the user interface and Gemini AI for natural language processing. This chatbot is designed to engage in interactive and intelligent conversations, making it suitable for various applications, such as customer support, personal assistance, or entertainment.
+A sophisticated conversational AI chatbot built to provide interactive and intelligent responses to user queries. This project demonstrates the implementation of modern natural language processing techniques to create engaging conversational experiences.
 
 ## Features
-- **Interactive UI:** Built using Streamlit for an easy-to-use and visually appealing chat interface.
-- **AI-Powered Conversations:** Utilizes Gemini AI to provide intelligent and context-aware responses.
-- **Real-Time Interaction:** Users can chat seamlessly with instant responses.
-- **Scalability:** Can be expanded to include additional functionalities, such as integrations with APIs or databases.
 
-## Tech Stack
-- **Frontend:** Streamlit (Python-based web framework for UI)
-- **Backend:** Python
-- **AI Model:** Gemini AI
+- Real-time chat interface
+- Natural language processing capabilities
+- Contextual response generation
+- Multiple conversation handling
+- Easy-to-use API endpoints
+- Customizable response templates
+- Session management
+- Error handling and logging
 
-## Installation & Setup
+## Getting Started
+
 ### Prerequisites
-Ensure you have the following installed:
-- Python (>=3.8)
-- Pip package manager
-- Virtual environment (optional but recommended)
 
-### Steps to Run Locally
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/srenithatoparam/Chatbot.git
-   cd Chatbot
-   ```
-2. Create and activate a virtual environment (optional but recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On macOS/Linux
-   venv\Scripts\activate      # On Windows
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
-5. Open the displayed local URL in your browser to start chatting.
+- Python 3.8 or higher
+- pip package manager
+- Virtual environment (recommended)
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/srenithatoparam/Chatbot.git
+cd Chatbot
+```
+
+2. Create and activate virtual environment (optional but recommended)
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+3. Install required packages
+```bash
+pip install -r requirements.txt
+```
+
+### Configuration
+
+1. Create a `.env` file in the project root
+2. Add your configuration variables:
+```env
+API_KEY=your_api_key_here
+MODEL_NAME=your_model_name
+PORT=5000
+```
 
 ## Usage
-- Open the chatbot interface in your browser.
-- Type a message in the input box and press Enter.
-- The chatbot will respond in real-time.
 
-## Future Enhancements
-- Integration with external APIs (e.g., weather, news, etc.).
-- Enhanced AI model capabilities for better responses.
-- Support for multiple languages.
-- Deployment to cloud platforms for wider accessibility.
+1. Start the server:
+```bash
+python app.py
+```
 
-## Contributions
-Contributions are welcome! Feel free to fork the repository, submit pull requests, or report issues.
+2. Access the chatbot interface at:
+```
+http://localhost:5000
+```
+
+3. API Endpoints:
+```
+POST /api/chat - Send a message to the chatbot
+GET /api/history - Retrieve chat history
+```
+
+## Project Structure
+
+```
+chatbot/
+├── app.py
+├── config/
+│   └── settings.py
+├── models/
+│   └── chat_model.py
+├── utils/
+│   └── helpers.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+├── requirements.txt
+└── README.md
+```
+
+## API Documentation
+
+### Send Message
+```
+POST /api/chat
+Content-Type: application/json
+
+{
+    "message": "Hello, how are you?",
+    "session_id": "unique_session_id"
+}
+```
+
+### Get Chat History
+```
+GET /api/history?session_id=unique_session_id
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Create a Pull Request
+
+## Development
+
+To run the development server with hot reloading:
+```bash
+python app.py --debug
+```
+
+## Testing
+
+Run the test suite:
+```bash
+python -m pytest tests/
+```
 
 ## License
-This project is licensed under the MIT License.
 
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Contact
-For any queries or collaborations, reach out via GitHub Issues or email.
+## Acknowledgments
 
----
+- Thanks to all contributors who have helped with the development
+- Special thanks to the open-source community for their valuable tools and libraries
 
-Happy Coding! 🚀
-```
+## Contact
+
+Srenitha Toparam - [srenithatoparam4@gmail.com]
+Project Link: [https://github.com/srenithatoparam/Chatbot](https://github.com/srenithatoparam/Chatbot)
 
 
 
